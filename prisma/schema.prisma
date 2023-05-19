@@ -26,7 +26,7 @@ model User {
   seenMessageIds String[]  @db.ObjectId
   seenMessages   Message[] @relation("Seen", fields: [seenMessageIds], references: [id])
 
-  account  Account[]
+  accounts Account[]
   messages Message[]
 }
 
@@ -41,7 +41,7 @@ model Account {
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String? @db.ObjectId
+  id_token          String? @db.String
   session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
