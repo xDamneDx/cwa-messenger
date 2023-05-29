@@ -10,7 +10,7 @@ const Avatar: React.FC<Props> = ({ user }) => {
     <div className="relative">
       <div className="relative inline-block overflow-hidden rounded-full h-9 w-9 md:h-11 md:w-11">
         <Image
-          src={user?.image || "/images/placehohlder.jpg"}
+          src={user?.image || "/images/placeholder.jpeg"}
           alt="Avatar"
           fill
         />
